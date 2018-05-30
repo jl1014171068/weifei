@@ -1,21 +1,16 @@
 <template>
   <div id="app">
-    <!-- <img src="~/assets/img/logo.png"> -->
-    <!-- <img src="~assets/logo.png"> -->
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <router-view></router-view>
+   333
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import api from '@/api'
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  },
   created () {
+    api.demo().then((res) => {
+      console.log(res)
+    })
   }
 }
 </script>
